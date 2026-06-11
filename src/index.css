@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-serif: "Playfair Display", serif;
+  
+  --color-gov-blue: #0A2540;
+  --color-gov-accent: #635BFF;
+  --color-gov-bg: #F6F9FC;
+}
+
+@layer base {
+  body {
+    @apply bg-gov-bg text-gov-blue font-sans antialiased;
+  }
+}
+
+.glass-card {
+  @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-sm rounded-2xl;
+}
+
+.data-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.status-pill {
+  @apply px-2 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider;
+}
+
+.status-active { @apply bg-emerald-100 text-emerald-700; }
+.status-pending { @apply bg-amber-100 text-amber-700; }
+.status-risk { @apply bg-rose-100 text-rose-700; }

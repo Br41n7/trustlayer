@@ -1,0 +1,8 @@
+{
+  "name": "TrustLayer Africa",
+  "description": "AI-powered financing and public fund tracking infrastructure for NGOs, governments, and development partners.",
+  "requestFramePermissions": [
+    "geolocation",
+    "camera"
+  ]
+}
